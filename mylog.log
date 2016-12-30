@@ -817,3 +817,49 @@
 2016-12-30 10:26:16.049  INFO 6969 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
 2016-12-30 10:26:16.050  INFO 6969 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2016-12-30 10:26:16.079  INFO 6969 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2016-12-30 11:44:50.346  INFO 7753 --- [main] c.q.s.BlogPropertiesApplicationTest      : Starting BlogPropertiesApplicationTest on Qingjies-MacBook-Pro.local with PID 7753 (started by qingjie in /Users/qingjie/dev/eclipse/java-neon/workspace/orange)
+2016-12-30 11:44:50.347 DEBUG 7753 --- [main] c.q.s.BlogPropertiesApplicationTest      : Running with Spring Boot v1.4.3.RELEASE, Spring v4.3.5.RELEASE
+2016-12-30 11:44:50.348  INFO 7753 --- [main] c.q.s.BlogPropertiesApplicationTest      : The following profiles are active: dev
+2016-12-30 11:44:50.418  INFO 7753 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1ca3b418: startup date [Fri Dec 30 11:44:50 EST 2016]; root of context hierarchy
+2016-12-30 11:44:52.288  INFO 7753 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-12-30 11:44:52.414  INFO 7753 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-12-30 11:44:52.454  INFO 7753 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.qingjie.domain.UserRepository.
+2016-12-30 11:44:53.112  INFO 7753 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4c06439b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-12-30 11:44:54.118  INFO 7753 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-12-30 11:44:54.144  INFO 7753 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-12-30 11:44:54.271  INFO 7753 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2016-12-30 11:44:54.273  INFO 7753 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-12-30 11:44:54.276  INFO 7753 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-12-30 11:44:54.339  INFO 7753 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-30 11:44:54.542  INFO 7753 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-12-30 11:44:55.248  INFO 7753 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2016-12-30 11:44:55.327  INFO 7753 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-12-30 11:44:56.423  INFO 7753 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2016-12-30 11:44:56.695  INFO 7753 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.qingjie.web.HelloController.index()
+2016-12-30 11:44:56.698  INFO 7753 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.util.List<com.qingjie.domain.User> com.qingjie.web.UserController.getUserList()
+2016-12-30 11:44:56.699  INFO 7753 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[POST]}" onto public java.lang.String com.qingjie.web.UserController.postUser(com.qingjie.domain.User)
+2016-12-30 11:44:56.700  INFO 7753 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[GET]}" onto public com.qingjie.domain.User com.qingjie.web.UserController.getUser(java.lang.Long)
+2016-12-30 11:44:56.701  INFO 7753 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[PUT]}" onto public java.lang.String com.qingjie.web.UserController.putUser(java.lang.Integer,com.qingjie.domain.User)
+2016-12-30 11:44:56.702  INFO 7753 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[DELETE]}" onto public java.lang.String com.qingjie.web.UserController.deleteUser(java.lang.Long)
+2016-12-30 11:44:56.703  INFO 7753 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2016-12-30 11:44:56.707  INFO 7753 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2016-12-30 11:44:56.707  INFO 7753 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2016-12-30 11:44:56.718  INFO 7753 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2016-12-30 11:44:56.723  INFO 7753 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-30 11:44:56.724  INFO 7753 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-30 11:44:57.332  INFO 7753 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1ca3b418: startup date [Fri Dec 30 11:44:50 EST 2016]; root of context hierarchy
+2016-12-30 11:44:57.406  INFO 7753 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 11:44:57.406  INFO 7753 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 11:44:57.429  INFO 7753 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalExceptionHandler
+2016-12-30 11:44:57.467  INFO 7753 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 11:44:57.865  WARN 7753 --- [main] arterDeprecationWarningAutoConfiguration : spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2016-12-30 11:44:57.983  INFO 7753 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2016-12-30 11:44:57.985  INFO 7753 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2016-12-30 11:44:58.015  INFO 7753 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2016-12-30 11:44:58.032  INFO 7753 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-12-30 11:44:58.286  INFO 7753 --- [main] c.q.s.BlogPropertiesApplicationTest      : Started BlogPropertiesApplicationTest in 8.665 seconds (JVM running for 9.45)
+2016-12-30 11:44:58.373  INFO 7753 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1ca3b418: startup date [Fri Dec 30 11:44:50 EST 2016]; root of context hierarchy
+2016-12-30 11:44:58.376  INFO 7753 --- [Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2016-12-30 11:44:58.387  INFO 7753 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
