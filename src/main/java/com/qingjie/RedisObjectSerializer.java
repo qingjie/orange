@@ -1,4 +1,4 @@
-package com.qingjie.domain;
+package com.qingjie;
 
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.serializer.support.DeserializingConverter;
