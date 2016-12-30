@@ -19,7 +19,7 @@ public class User implements Serializable {
 	@GeneratedValue
 	private Integer id;
 
-	@Column(nullable = false)
+	@Column(nullable = false, length = 5)
 	private String name;
 
 	@Column(nullable = false)
