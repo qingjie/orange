@@ -1,0 +1,483 @@
+2016-12-30 00:14:31.851  INFO 3297 --- [main] com.qingjie.service.JPAApplicationTest   : Starting JPAApplicationTest on Qingjies-MacBook-Pro.local with PID 3297 (started by qingjie in /Users/qingjie/dev/eclipse/java-neon/workspace/orange)
+2016-12-30 00:14:31.852 DEBUG 3297 --- [main] com.qingjie.service.JPAApplicationTest   : Running with Spring Boot v1.4.3.RELEASE, Spring v4.3.5.RELEASE
+2016-12-30 00:14:31.853  INFO 3297 --- [main] com.qingjie.service.JPAApplicationTest   : No active profile set, falling back to default profiles: default
+2016-12-30 00:14:31.966  INFO 3297 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65b3a85a: startup date [Fri Dec 30 00:14:31 EST 2016]; root of context hierarchy
+2016-12-30 00:14:35.138  INFO 3297 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$18ef19e4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-12-30 00:14:36.773  INFO 3297 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-12-30 00:14:36.821  INFO 3297 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-12-30 00:14:37.052  INFO 3297 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2016-12-30 00:14:37.054  INFO 3297 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-12-30 00:14:37.056  INFO 3297 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-12-30 00:14:37.239  INFO 3297 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-30 00:14:37.582  INFO 3297 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-12-30 00:14:38.632  INFO 3297 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-12-30 00:14:38.658  INFO 3297 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-12-30 00:14:38.732  INFO 3297 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-12-30 00:14:40.221  INFO 3297 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2016-12-30 00:14:40.667  INFO 3297 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@65b3a85a: startup date [Fri Dec 30 00:14:31 EST 2016]; root of context hierarchy
+2016-12-30 00:14:40.866  INFO 3297 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.qingjie.web.HelloController.index()
+2016-12-30 00:14:40.874  INFO 3297 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[PUT]}" onto public java.lang.String com.qingjie.web.UserController.putUser(java.lang.Integer,com.qingjie.domain.User)
+2016-12-30 00:14:40.874  INFO 3297 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/],methods=[POST]}" onto public java.lang.String com.qingjie.web.UserController.postUser(com.qingjie.domain.User)
+2016-12-30 00:14:40.875  INFO 3297 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[GET]}" onto public com.qingjie.domain.User com.qingjie.web.UserController.getUser(java.lang.Long)
+2016-12-30 00:14:40.876  INFO 3297 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/],methods=[GET]}" onto public java.util.List<com.qingjie.domain.User> com.qingjie.web.UserController.getUserList()
+2016-12-30 00:14:40.877  INFO 3297 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[DELETE]}" onto public java.lang.String com.qingjie.web.UserController.deleteUser(java.lang.Long)
+2016-12-30 00:14:40.885  INFO 3297 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-30 00:14:40.887  INFO 3297 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-30 00:14:41.013  INFO 3297 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:14:41.013  INFO 3297 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:14:41.097  INFO 3297 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:14:41.709  INFO 3297 --- [main] com.qingjie.service.JPAApplicationTest   : Started JPAApplicationTest in 10.843 seconds (JVM running for 11.947)
+2016-12-30 00:14:42.236  INFO 3297 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@65b3a85a: startup date [Fri Dec 30 00:14:31 EST 2016]; root of context hierarchy
+2016-12-30 00:14:42.241  INFO 3297 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-12-30 00:14:42.241  INFO 3297 --- [Thread-2] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-12-30 00:14:42.249  INFO 3297 --- [Thread-2] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-12-30 00:20:35.346  INFO 3325 --- [main] com.qingjie.service.UserServiceTest      : Starting UserServiceTest on Qingjies-MacBook-Pro.local with PID 3325 (started by qingjie in /Users/qingjie/dev/eclipse/java-neon/workspace/orange)
+2016-12-30 00:20:35.347 DEBUG 3325 --- [main] com.qingjie.service.UserServiceTest      : Running with Spring Boot v1.4.3.RELEASE, Spring v4.3.5.RELEASE
+2016-12-30 00:20:35.348  INFO 3325 --- [main] com.qingjie.service.UserServiceTest      : No active profile set, falling back to default profiles: default
+2016-12-30 00:20:35.413  INFO 3325 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2a265ea9: startup date [Fri Dec 30 00:20:35 EST 2016]; root of context hierarchy
+2016-12-30 00:20:37.536  INFO 3325 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bbe12892] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-12-30 00:20:38.793  INFO 3325 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-12-30 00:20:38.817  INFO 3325 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-12-30 00:20:38.930  INFO 3325 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2016-12-30 00:20:38.932  INFO 3325 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-12-30 00:20:38.934  INFO 3325 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-12-30 00:20:38.997  INFO 3325 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-30 00:20:39.151  INFO 3325 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-12-30 00:20:39.637  INFO 3325 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-12-30 00:20:39.657  INFO 3325 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-12-30 00:20:39.692  INFO 3325 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-12-30 00:20:40.928  INFO 3325 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2016-12-30 00:20:41.193  INFO 3325 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.qingjie.web.HelloController.index()
+2016-12-30 00:20:41.197  INFO 3325 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/],methods=[GET]}" onto public java.util.List<com.qingjie.domain.User> com.qingjie.web.UserController.getUserList()
+2016-12-30 00:20:41.197  INFO 3325 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/],methods=[POST]}" onto public java.lang.String com.qingjie.web.UserController.postUser(com.qingjie.domain.User)
+2016-12-30 00:20:41.198  INFO 3325 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[GET]}" onto public com.qingjie.domain.User com.qingjie.web.UserController.getUser(java.lang.Long)
+2016-12-30 00:20:41.198  INFO 3325 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[PUT]}" onto public java.lang.String com.qingjie.web.UserController.putUser(java.lang.Integer,com.qingjie.domain.User)
+2016-12-30 00:20:41.198  INFO 3325 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[DELETE]}" onto public java.lang.String com.qingjie.web.UserController.deleteUser(java.lang.Long)
+2016-12-30 00:20:41.200  INFO 3325 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2016-12-30 00:20:41.203  INFO 3325 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2016-12-30 00:20:41.204  INFO 3325 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2016-12-30 00:20:41.204  INFO 3325 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2016-12-30 00:20:41.209  INFO 3325 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-30 00:20:41.209  INFO 3325 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-30 00:20:41.820  INFO 3325 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@2a265ea9: startup date [Fri Dec 30 00:20:35 EST 2016]; root of context hierarchy
+2016-12-30 00:20:41.914  INFO 3325 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:20:41.914  INFO 3325 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:20:41.976  INFO 3325 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:20:42.411  INFO 3325 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2016-12-30 00:20:42.441  INFO 3325 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2016-12-30 00:20:42.451  INFO 3325 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-12-30 00:20:42.477  INFO 3325 --- [main] com.qingjie.service.UserServiceTest      : Started UserServiceTest in 7.909 seconds (JVM running for 8.829)
+2016-12-30 00:20:42.583  INFO 3325 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@2a265ea9: startup date [Fri Dec 30 00:20:35 EST 2016]; root of context hierarchy
+2016-12-30 00:20:42.591  INFO 3325 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-12-30 00:20:42.592  INFO 3325 --- [Thread-2] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-12-30 00:20:42.597  INFO 3325 --- [Thread-2] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-12-30 00:21:10.204  INFO 3327 --- [main] com.qingjie.service.UserServiceTest      : Starting UserServiceTest on Qingjies-MacBook-Pro.local with PID 3327 (started by qingjie in /Users/qingjie/dev/eclipse/java-neon/workspace/orange)
+2016-12-30 00:21:10.205 DEBUG 3327 --- [main] com.qingjie.service.UserServiceTest      : Running with Spring Boot v1.4.3.RELEASE, Spring v4.3.5.RELEASE
+2016-12-30 00:21:10.206  INFO 3327 --- [main] com.qingjie.service.UserServiceTest      : No active profile set, falling back to default profiles: default
+2016-12-30 00:21:10.282  INFO 3327 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@19ae6bb: startup date [Fri Dec 30 00:21:10 EST 2016]; root of context hierarchy
+2016-12-30 00:21:12.800  INFO 3327 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5a397c62] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-12-30 00:21:14.188  INFO 3327 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-12-30 00:21:14.215  INFO 3327 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-12-30 00:21:14.390  INFO 3327 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2016-12-30 00:21:14.394  INFO 3327 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-12-30 00:21:14.397  INFO 3327 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-12-30 00:21:14.485  INFO 3327 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-30 00:21:14.874  INFO 3327 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-12-30 00:21:15.400  INFO 3327 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2016-12-30 00:21:15.414  INFO 3327 --- [main] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: user
+2016-12-30 00:21:15.415  INFO 3327 --- [main] rmationExtractorJdbcDatabaseMetaDataImpl : HHH000262: Table not found: user
+2016-12-30 00:21:15.490  INFO 3327 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-12-30 00:21:17.089  INFO 3327 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2016-12-30 00:21:17.446  INFO 3327 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.qingjie.web.HelloController.index()
+2016-12-30 00:21:17.451  INFO 3327 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[PUT]}" onto public java.lang.String com.qingjie.web.UserController.putUser(java.lang.Integer,com.qingjie.domain.User)
+2016-12-30 00:21:17.451  INFO 3327 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/],methods=[POST]}" onto public java.lang.String com.qingjie.web.UserController.postUser(com.qingjie.domain.User)
+2016-12-30 00:21:17.451  INFO 3327 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[GET]}" onto public com.qingjie.domain.User com.qingjie.web.UserController.getUser(java.lang.Long)
+2016-12-30 00:21:17.452  INFO 3327 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/],methods=[GET]}" onto public java.util.List<com.qingjie.domain.User> com.qingjie.web.UserController.getUserList()
+2016-12-30 00:21:17.452  INFO 3327 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[DELETE]}" onto public java.lang.String com.qingjie.web.UserController.deleteUser(java.lang.Long)
+2016-12-30 00:21:17.454  INFO 3327 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2016-12-30 00:21:17.458  INFO 3327 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2016-12-30 00:21:17.458  INFO 3327 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2016-12-30 00:21:17.459  INFO 3327 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2016-12-30 00:21:17.464  INFO 3327 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-30 00:21:17.465  INFO 3327 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-30 00:21:18.294  INFO 3327 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@19ae6bb: startup date [Fri Dec 30 00:21:10 EST 2016]; root of context hierarchy
+2016-12-30 00:21:18.413  INFO 3327 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:21:18.413  INFO 3327 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:21:18.499  INFO 3327 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:21:19.340  INFO 3327 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2016-12-30 00:21:19.375  INFO 3327 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2016-12-30 00:21:19.390  INFO 3327 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-12-30 00:21:19.431  INFO 3327 --- [main] com.qingjie.service.UserServiceTest      : Started UserServiceTest in 9.848 seconds (JVM running for 10.8)
+2016-12-30 00:21:19.550  INFO 3327 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@19ae6bb: startup date [Fri Dec 30 00:21:10 EST 2016]; root of context hierarchy
+2016-12-30 00:21:19.561  INFO 3327 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-12-30 00:21:46.217  INFO 3329 --- [main] com.qingjie.OrangeApplication            : Starting OrangeApplication on Qingjies-MacBook-Pro.local with PID 3329 (/Users/qingjie/dev/eclipse/java-neon/workspace/orange/target/classes started by qingjie in /Users/qingjie/dev/eclipse/java-neon/workspace/orange)
+2016-12-30 00:21:46.225 DEBUG 3329 --- [main] com.qingjie.OrangeApplication            : Running with Spring Boot v1.4.3.RELEASE, Spring v4.3.5.RELEASE
+2016-12-30 00:21:46.226  INFO 3329 --- [main] com.qingjie.OrangeApplication            : No active profile set, falling back to default profiles: default
+2016-12-30 00:21:46.313  INFO 3329 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@384ad17b: startup date [Fri Dec 30 00:21:46 EST 2016]; root of context hierarchy
+2016-12-30 00:21:48.537  INFO 3329 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7b680f25] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-12-30 00:21:49.395  INFO 3329 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-12-30 00:21:49.414  INFO 3329 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-12-30 00:21:49.415  INFO 3329 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-12-30 00:21:49.549  INFO 3329 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-12-30 00:21:49.549  INFO 3329 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3247 ms
+2016-12-30 00:21:49.740  INFO 3329 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-12-30 00:21:49.745  INFO 3329 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-12-30 00:21:49.746  INFO 3329 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-12-30 00:21:49.746  INFO 3329 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-12-30 00:21:49.746  INFO 3329 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-12-30 00:21:50.518  INFO 3329 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-12-30 00:21:50.542  INFO 3329 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-12-30 00:21:50.804  INFO 3329 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2016-12-30 00:21:50.806  INFO 3329 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-12-30 00:21:50.809  INFO 3329 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-12-30 00:21:50.861  INFO 3329 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-30 00:21:51.006  INFO 3329 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-12-30 00:21:51.472  INFO 3329 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2016-12-30 00:21:51.551  INFO 3329 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-12-30 00:21:52.885  INFO 3329 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2016-12-30 00:21:53.202  INFO 3329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.qingjie.web.HelloController.index()
+2016-12-30 00:21:53.207  INFO 3329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[GET]}" onto public com.qingjie.domain.User com.qingjie.web.UserController.getUser(java.lang.Long)
+2016-12-30 00:21:53.207  INFO 3329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/],methods=[POST]}" onto public java.lang.String com.qingjie.web.UserController.postUser(com.qingjie.domain.User)
+2016-12-30 00:21:53.208  INFO 3329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/],methods=[GET]}" onto public java.util.List<com.qingjie.domain.User> com.qingjie.web.UserController.getUserList()
+2016-12-30 00:21:53.209  INFO 3329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[PUT]}" onto public java.lang.String com.qingjie.web.UserController.putUser(java.lang.Integer,com.qingjie.domain.User)
+2016-12-30 00:21:53.211  INFO 3329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[DELETE]}" onto public java.lang.String com.qingjie.web.UserController.deleteUser(java.lang.Long)
+2016-12-30 00:21:53.212  INFO 3329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2016-12-30 00:21:53.217  INFO 3329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2016-12-30 00:21:53.219  INFO 3329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2016-12-30 00:21:53.219  INFO 3329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2016-12-30 00:21:53.224  INFO 3329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-30 00:21:53.225  INFO 3329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-30 00:21:53.761  INFO 3329 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@384ad17b: startup date [Fri Dec 30 00:21:46 EST 2016]; root of context hierarchy
+2016-12-30 00:21:53.854  INFO 3329 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:21:53.854  INFO 3329 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:21:53.921  INFO 3329 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:21:54.382  INFO 3329 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-12-30 00:21:54.402  INFO 3329 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2016-12-30 00:21:54.430  INFO 3329 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2016-12-30 00:21:54.447  INFO 3329 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-12-30 00:21:54.546  INFO 3329 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-12-30 00:21:54.558  INFO 3329 --- [main] com.qingjie.OrangeApplication            : Started OrangeApplication in 8.8 seconds (JVM running for 9.229)
+2016-12-30 00:21:59.016  INFO 3329 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-12-30 00:21:59.016  INFO 3329 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-12-30 00:21:59.036  INFO 3329 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2016-12-30 00:22:19.171  WARN 3329 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "{1}"
+2016-12-30 00:24:46.843  INFO 3329 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@384ad17b: startup date [Fri Dec 30 00:21:46 EST 2016]; root of context hierarchy
+2016-12-30 00:24:46.847  INFO 3329 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-12-30 00:24:46.853  INFO 3329 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-12-30 00:24:51.780  INFO 3343 --- [main] com.qingjie.OrangeApplication            : Starting OrangeApplication on Qingjies-MacBook-Pro.local with PID 3343 (/Users/qingjie/dev/eclipse/java-neon/workspace/orange/target/classes started by qingjie in /Users/qingjie/dev/eclipse/java-neon/workspace/orange)
+2016-12-30 00:24:51.790 DEBUG 3343 --- [main] com.qingjie.OrangeApplication            : Running with Spring Boot v1.4.3.RELEASE, Spring v4.3.5.RELEASE
+2016-12-30 00:24:51.791  INFO 3343 --- [main] com.qingjie.OrangeApplication            : No active profile set, falling back to default profiles: default
+2016-12-30 00:24:51.890  INFO 3343 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@642a7222: startup date [Fri Dec 30 00:24:51 EST 2016]; root of context hierarchy
+2016-12-30 00:24:54.660  INFO 3343 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7c174d78] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-12-30 00:24:55.961  INFO 3343 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-12-30 00:24:55.985  INFO 3343 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-12-30 00:24:55.987  INFO 3343 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-12-30 00:24:56.175  INFO 3343 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-12-30 00:24:56.176  INFO 3343 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4290 ms
+2016-12-30 00:24:56.446  INFO 3343 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-12-30 00:24:56.460  INFO 3343 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-12-30 00:24:56.461  INFO 3343 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-12-30 00:24:56.461  INFO 3343 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-12-30 00:24:56.462  INFO 3343 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-12-30 00:24:57.579  INFO 3343 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-12-30 00:24:57.634  INFO 3343 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-12-30 00:24:57.934  INFO 3343 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2016-12-30 00:24:57.937  INFO 3343 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-12-30 00:24:57.939  INFO 3343 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-12-30 00:24:58.016  INFO 3343 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-30 00:24:58.240  INFO 3343 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-12-30 00:24:58.926  INFO 3343 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2016-12-30 00:24:59.031  INFO 3343 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-12-30 00:25:00.374  INFO 3343 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2016-12-30 00:25:00.695  INFO 3343 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.qingjie.web.HelloController.index()
+2016-12-30 00:25:00.700  INFO 3343 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[PUT]}" onto public java.lang.String com.qingjie.web.UserController.putUser(java.lang.Integer,com.qingjie.domain.User)
+2016-12-30 00:25:00.700  INFO 3343 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[GET]}" onto public com.qingjie.domain.User com.qingjie.web.UserController.getUser(java.lang.Long)
+2016-12-30 00:25:00.701  INFO 3343 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[POST]}" onto public java.lang.String com.qingjie.web.UserController.postUser(com.qingjie.domain.User)
+2016-12-30 00:25:00.701  INFO 3343 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.util.List<com.qingjie.domain.User> com.qingjie.web.UserController.getUserList()
+2016-12-30 00:25:00.702  INFO 3343 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[DELETE]}" onto public java.lang.String com.qingjie.web.UserController.deleteUser(java.lang.Long)
+2016-12-30 00:25:00.703  INFO 3343 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2016-12-30 00:25:00.708  INFO 3343 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2016-12-30 00:25:00.709  INFO 3343 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2016-12-30 00:25:00.710  INFO 3343 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2016-12-30 00:25:00.714  INFO 3343 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-30 00:25:00.714  INFO 3343 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-30 00:25:01.199  INFO 3343 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@642a7222: startup date [Fri Dec 30 00:24:51 EST 2016]; root of context hierarchy
+2016-12-30 00:25:01.300  INFO 3343 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:25:01.301  INFO 3343 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:25:01.379  INFO 3343 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:25:01.994  INFO 3343 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-12-30 00:25:02.013  INFO 3343 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2016-12-30 00:25:02.046  INFO 3343 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2016-12-30 00:25:02.066  INFO 3343 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-12-30 00:25:02.175  INFO 3343 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-12-30 00:25:02.184  INFO 3343 --- [main] com.qingjie.OrangeApplication            : Started OrangeApplication in 11.259 seconds (JVM running for 11.807)
+2016-12-30 00:25:17.702  INFO 3343 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-12-30 00:25:17.702  INFO 3343 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-12-30 00:25:17.740  INFO 3343 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 38 ms
+2016-12-30 00:25:49.678  INFO 3357 --- [main] com.qingjie.OrangeApplication            : Starting OrangeApplication on Qingjies-MacBook-Pro.local with PID 3357 (/Users/qingjie/dev/eclipse/java-neon/workspace/orange/target/classes started by qingjie in /Users/qingjie/dev/eclipse/java-neon/workspace/orange)
+2016-12-30 00:25:49.690 DEBUG 3357 --- [main] com.qingjie.OrangeApplication            : Running with Spring Boot v1.4.3.RELEASE, Spring v4.3.5.RELEASE
+2016-12-30 00:25:49.691  INFO 3357 --- [main] com.qingjie.OrangeApplication            : No active profile set, falling back to default profiles: default
+2016-12-30 00:25:49.804  INFO 3357 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@642a7222: startup date [Fri Dec 30 00:25:49 EST 2016]; root of context hierarchy
+2016-12-30 00:25:52.584  INFO 3357 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$aa863fb7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-12-30 00:25:53.568  INFO 3357 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-12-30 00:25:53.585  INFO 3357 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-12-30 00:25:53.586  INFO 3357 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-12-30 00:25:53.726  INFO 3357 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-12-30 00:25:53.727  INFO 3357 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3927 ms
+2016-12-30 00:25:54.089  INFO 3357 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-12-30 00:25:54.095  INFO 3357 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-12-30 00:25:54.096  INFO 3357 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-12-30 00:25:54.096  INFO 3357 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-12-30 00:25:54.096  INFO 3357 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-12-30 00:25:54.915  INFO 3357 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-12-30 00:25:54.938  INFO 3357 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-12-30 00:25:55.197  INFO 3357 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2016-12-30 00:25:55.200  INFO 3357 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-12-30 00:25:55.203  INFO 3357 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-12-30 00:25:55.259  INFO 3357 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-30 00:25:55.413  INFO 3357 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-12-30 00:25:55.949  INFO 3357 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2016-12-30 00:25:56.092  INFO 3357 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-12-30 00:25:57.900  INFO 3357 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2016-12-30 00:25:58.350  INFO 3357 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.qingjie.web.HelloController.index()
+2016-12-30 00:25:58.358  INFO 3357 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[PUT]}" onto public java.lang.String com.qingjie.web.UserController.putUser(java.lang.Integer,com.qingjie.domain.User)
+2016-12-30 00:25:58.359  INFO 3357 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[GET]}" onto public com.qingjie.domain.User com.qingjie.web.UserController.getUser(java.lang.Long)
+2016-12-30 00:25:58.360  INFO 3357 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[POST]}" onto public java.lang.String com.qingjie.web.UserController.postUser(com.qingjie.domain.User)
+2016-12-30 00:25:58.361  INFO 3357 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.util.List<com.qingjie.domain.User> com.qingjie.web.UserController.getUserList()
+2016-12-30 00:25:58.361  INFO 3357 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[DELETE]}" onto public java.lang.String com.qingjie.web.UserController.deleteUser(java.lang.Long)
+2016-12-30 00:25:58.362  INFO 3357 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2016-12-30 00:25:58.366  INFO 3357 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2016-12-30 00:25:58.368  INFO 3357 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2016-12-30 00:25:58.369  INFO 3357 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2016-12-30 00:25:58.376  INFO 3357 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-30 00:25:58.377  INFO 3357 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-30 00:25:59.003  INFO 3357 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@642a7222: startup date [Fri Dec 30 00:25:49 EST 2016]; root of context hierarchy
+2016-12-30 00:25:59.123  INFO 3357 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:25:59.123  INFO 3357 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:25:59.208  INFO 3357 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:25:59.962  INFO 3357 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-12-30 00:25:59.985  INFO 3357 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2016-12-30 00:26:00.033  INFO 3357 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2016-12-30 00:26:00.046  INFO 3357 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-12-30 00:26:00.144  INFO 3357 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-12-30 00:26:00.156  INFO 3357 --- [main] com.qingjie.OrangeApplication            : Started OrangeApplication in 11.282 seconds (JVM running for 11.853)
+2016-12-30 00:26:02.741  INFO 3357 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-12-30 00:26:02.742  INFO 3357 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-12-30 00:26:02.767  INFO 3357 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2016-12-30 00:26:41.846  INFO 3360 --- [main] com.qingjie.OrangeApplication            : Starting OrangeApplication on Qingjies-MacBook-Pro.local with PID 3360 (/Users/qingjie/dev/eclipse/java-neon/workspace/orange/target/classes started by qingjie in /Users/qingjie/dev/eclipse/java-neon/workspace/orange)
+2016-12-30 00:26:41.852 DEBUG 3360 --- [main] com.qingjie.OrangeApplication            : Running with Spring Boot v1.4.3.RELEASE, Spring v4.3.5.RELEASE
+2016-12-30 00:26:41.854  INFO 3360 --- [main] com.qingjie.OrangeApplication            : No active profile set, falling back to default profiles: default
+2016-12-30 00:26:41.955  INFO 3360 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@384ad17b: startup date [Fri Dec 30 00:26:41 EST 2016]; root of context hierarchy
+2016-12-30 00:26:44.776  INFO 3360 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$86aa6f7d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-12-30 00:26:45.777  INFO 3360 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-12-30 00:26:45.795  INFO 3360 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-12-30 00:26:45.798  INFO 3360 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-12-30 00:26:45.932  INFO 3360 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-12-30 00:26:45.932  INFO 3360 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3983 ms
+2016-12-30 00:26:46.123  INFO 3360 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-12-30 00:26:46.128  INFO 3360 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-12-30 00:26:46.129  INFO 3360 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-12-30 00:26:46.129  INFO 3360 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-12-30 00:26:46.129  INFO 3360 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-12-30 00:26:46.826  INFO 3360 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-12-30 00:26:46.848  INFO 3360 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-12-30 00:26:47.064  INFO 3360 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2016-12-30 00:26:47.070  INFO 3360 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-12-30 00:26:47.072  INFO 3360 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-12-30 00:26:47.121  INFO 3360 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-30 00:26:47.306  INFO 3360 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-12-30 00:26:47.809  INFO 3360 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2016-12-30 00:26:47.909  INFO 3360 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-12-30 00:26:49.172  INFO 3360 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2016-12-30 00:26:49.448  INFO 3360 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.qingjie.web.HelloController.index()
+2016-12-30 00:26:49.453  INFO 3360 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[POST]}" onto public java.lang.String com.qingjie.web.UserController.postUser(com.qingjie.domain.User)
+2016-12-30 00:26:49.454  INFO 3360 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[GET]}" onto public com.qingjie.domain.User com.qingjie.web.UserController.getUser(java.lang.Long)
+2016-12-30 00:26:49.454  INFO 3360 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.util.List<com.qingjie.domain.User> com.qingjie.web.UserController.getUserList()
+2016-12-30 00:26:49.455  INFO 3360 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[PUT]}" onto public java.lang.String com.qingjie.web.UserController.putUser(java.lang.Integer,com.qingjie.domain.User)
+2016-12-30 00:26:49.456  INFO 3360 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[DELETE]}" onto public java.lang.String com.qingjie.web.UserController.deleteUser(java.lang.Long)
+2016-12-30 00:26:49.457  INFO 3360 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2016-12-30 00:26:49.462  INFO 3360 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2016-12-30 00:26:49.463  INFO 3360 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2016-12-30 00:26:49.464  INFO 3360 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2016-12-30 00:26:49.468  INFO 3360 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-30 00:26:49.469  INFO 3360 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-30 00:26:49.862  INFO 3360 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@384ad17b: startup date [Fri Dec 30 00:26:41 EST 2016]; root of context hierarchy
+2016-12-30 00:26:49.942  INFO 3360 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:26:49.942  INFO 3360 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:26:50.003  INFO 3360 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:26:50.481  INFO 3360 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-12-30 00:26:50.498  INFO 3360 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2016-12-30 00:26:50.526  INFO 3360 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2016-12-30 00:26:50.536  INFO 3360 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-12-30 00:26:50.630  INFO 3360 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-12-30 00:26:50.639  INFO 3360 --- [main] com.qingjie.OrangeApplication            : Started OrangeApplication in 9.369 seconds (JVM running for 9.761)
+2016-12-30 00:26:50.884  INFO 3360 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-12-30 00:26:50.885  INFO 3360 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-12-30 00:26:50.911  INFO 3360 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2016-12-30 00:29:41.368  INFO 3360 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@384ad17b: startup date [Fri Dec 30 00:26:41 EST 2016]; root of context hierarchy
+2016-12-30 00:29:41.372  INFO 3360 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-12-30 00:29:41.377  INFO 3360 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-12-30 00:30:55.333  INFO 3371 --- [main] com.qingjie.OrangeApplication            : Starting OrangeApplication on Qingjies-MacBook-Pro.local with PID 3371 (/Users/qingjie/dev/eclipse/java-neon/workspace/orange/target/classes started by qingjie in /Users/qingjie/dev/eclipse/java-neon/workspace/orange)
+2016-12-30 00:30:55.343 DEBUG 3371 --- [main] com.qingjie.OrangeApplication            : Running with Spring Boot v1.4.3.RELEASE, Spring v4.3.5.RELEASE
+2016-12-30 00:30:55.344  INFO 3371 --- [main] com.qingjie.OrangeApplication            : No active profile set, falling back to default profiles: default
+2016-12-30 00:30:55.431  INFO 3371 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7d322cad: startup date [Fri Dec 30 00:30:55 EST 2016]; root of context hierarchy
+2016-12-30 00:30:58.177  INFO 3371 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$594ef71f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-12-30 00:30:59.202  INFO 3371 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-12-30 00:30:59.222  INFO 3371 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-12-30 00:30:59.224  INFO 3371 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-12-30 00:30:59.380  INFO 3371 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-12-30 00:30:59.381  INFO 3371 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3954 ms
+2016-12-30 00:30:59.848  INFO 3371 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-12-30 00:30:59.854  INFO 3371 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-12-30 00:30:59.856  INFO 3371 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-12-30 00:30:59.857  INFO 3371 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-12-30 00:30:59.857  INFO 3371 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-12-30 00:31:00.820  INFO 3371 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-12-30 00:31:00.846  INFO 3371 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-12-30 00:31:01.118  INFO 3371 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2016-12-30 00:31:01.120  INFO 3371 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-12-30 00:31:01.123  INFO 3371 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-12-30 00:31:01.173  INFO 3371 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-30 00:31:01.304  INFO 3371 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-12-30 00:31:01.784  INFO 3371 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2016-12-30 00:31:01.871  INFO 3371 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-12-30 00:31:03.458  INFO 3371 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2016-12-30 00:31:03.858  INFO 3371 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.qingjie.web.HelloController.index()
+2016-12-30 00:31:03.863  INFO 3371 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[GET]}" onto public com.qingjie.domain.User com.qingjie.web.UserController.getUser(java.lang.Long)
+2016-12-30 00:31:03.865  INFO 3371 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[PUT]}" onto public java.lang.String com.qingjie.web.UserController.putUser(java.lang.Integer,com.qingjie.domain.User)
+2016-12-30 00:31:03.865  INFO 3371 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[POST]}" onto public java.lang.String com.qingjie.web.UserController.postUser(com.qingjie.domain.User)
+2016-12-30 00:31:03.866  INFO 3371 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.util.List<com.qingjie.domain.User> com.qingjie.web.UserController.getUserList()
+2016-12-30 00:31:03.867  INFO 3371 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[DELETE]}" onto public java.lang.String com.qingjie.web.UserController.deleteUser(java.lang.Long)
+2016-12-30 00:31:03.871  INFO 3371 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2016-12-30 00:31:03.877  INFO 3371 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2016-12-30 00:31:03.878  INFO 3371 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2016-12-30 00:31:03.880  INFO 3371 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2016-12-30 00:31:03.885  INFO 3371 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-30 00:31:03.886  INFO 3371 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-30 00:31:04.429  INFO 3371 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7d322cad: startup date [Fri Dec 30 00:30:55 EST 2016]; root of context hierarchy
+2016-12-30 00:31:04.543  INFO 3371 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:31:04.543  INFO 3371 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:31:04.689  INFO 3371 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-30 00:31:05.418  INFO 3371 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-12-30 00:31:05.437  INFO 3371 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2016-12-30 00:31:05.470  INFO 3371 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2016-12-30 00:31:05.482  INFO 3371 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-12-30 00:31:05.488  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method index was hello-controller
+2016-12-30 00:31:05.492  INFO 3371 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: index belongs to groups: [[ResourceGroup{groupName='hello-controller', position=0, controller=com.qingjie.web.HelloController}]] 
+2016-12-30 00:31:05.493  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getUser was user-controller
+2016-12-30 00:31:05.493  INFO 3371 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getUser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.qingjie.web.UserController}]] 
+2016-12-30 00:31:05.494  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method putUser was user-controller
+2016-12-30 00:31:05.495  INFO 3371 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: putUser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.qingjie.web.UserController}]] 
+2016-12-30 00:31:05.495  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method deleteUser was user-controller
+2016-12-30 00:31:05.496  INFO 3371 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: deleteUser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.qingjie.web.UserController}]] 
+2016-12-30 00:31:05.496  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method postUser was user-controller
+2016-12-30 00:31:05.496  INFO 3371 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: postUser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.qingjie.web.UserController}]] 
+2016-12-30 00:31:05.497  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getUserList was user-controller
+2016-12-30 00:31:05.497  INFO 3371 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getUserList belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.qingjie.web.UserController}]] 
+2016-12-30 00:31:05.502  INFO 3371 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/user-controller Description: user-controller Position: 0
+2016-12-30 00:31:05.504  INFO 3371 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/hello-controller Description: hello-controller Position: 0
+2016-12-30 00:31:05.529  INFO 3371 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2016-12-30 00:31:05.530  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.String(true)
+2016-12-30 00:31:05.546  INFO 3371 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2016-12-30 00:31:05.547  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2016-12-30 00:31:05.558  INFO 3371 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /hello.com.qingjie.web.HelloController.index.DefaultGenericTypeNamingStrategy
+2016-12-30 00:31:05.558  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /hello.com.qingjie.web.HelloController.index.DefaultGenericTypeNamingStrategy
+2016-12-30 00:31:05.572  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method index was hello-controller
+2016-12-30 00:31:05.577  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method index was hello-controller
+2016-12-30 00:31:05.583  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method index was hello-controller
+2016-12-30 00:31:05.584  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method index was hello-controller
+2016-12-30 00:31:05.586  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method index was hello-controller
+2016-12-30 00:31:05.588  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method index was hello-controller
+2016-12-30 00:31:05.589  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method index was hello-controller
+2016-12-30 00:31:05.590  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method index was hello-controller
+2016-12-30 00:31:05.593  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method index was hello-controller
+2016-12-30 00:31:05.595  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method index was hello-controller
+2016-12-30 00:31:05.596  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method index was hello-controller
+2016-12-30 00:31:05.598  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method index was hello-controller
+2016-12-30 00:31:05.599  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method index was hello-controller
+2016-12-30 00:31:05.601  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method index was hello-controller
+2016-12-30 00:31:05.605  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method index was hello-controller
+2016-12-30 00:31:05.607  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method index was hello-controller
+2016-12-30 00:31:05.641  INFO 3371 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2016-12-30 00:31:05.644  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.String(true)
+2016-12-30 00:31:05.644  INFO 3371 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2016-12-30 00:31:05.644  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2016-12-30 00:31:05.645  INFO 3371 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /users/{id}.com.qingjie.web.UserController.deleteUser.DefaultGenericTypeNamingStrategy
+2016-12-30 00:31:05.645  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /users/{id}.com.qingjie.web.UserController.deleteUser.DefaultGenericTypeNamingStrategy
+2016-12-30 00:31:05.659  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method deleteUser was user-controller
+2016-12-30 00:31:05.669  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method deleteUser was user-controller
+2016-12-30 00:31:05.676  INFO 3371 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.qingjie.domain.User(true)
+2016-12-30 00:31:05.680  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.qingjie.domain.User(true)
+2016-12-30 00:31:05.682  INFO 3371 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.qingjie.domain.User(true)
+2016-12-30 00:31:05.683  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.qingjie.domain.User(true)
+2016-12-30 00:31:05.727  INFO 3371 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.qingjie.domain.User(true)
+2016-12-30 00:31:05.727  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.qingjie.domain.User(true)
+2016-12-30 00:31:05.728  INFO 3371 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.qingjie.domain.User(true)
+2016-12-30 00:31:05.728  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.qingjie.domain.User(true)
+2016-12-30 00:31:05.730  INFO 3371 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /users/{id}.com.qingjie.web.UserController.getUser.DefaultGenericTypeNamingStrategy
+2016-12-30 00:31:05.730  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /users/{id}.com.qingjie.web.UserController.getUser.DefaultGenericTypeNamingStrategy
+2016-12-30 00:31:05.732  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getUser was user-controller
+2016-12-30 00:31:05.738  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getUser was user-controller
+2016-12-30 00:31:05.740  INFO 3371 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.qingjie.domain.User>(true)
+2016-12-30 00:31:05.741  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<com.qingjie.domain.User>(true)
+2016-12-30 00:31:05.741  INFO 3371 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<com.qingjie.domain.User>(true)
+2016-12-30 00:31:05.741  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<com.qingjie.domain.User>(true)
+2016-12-30 00:31:05.742  INFO 3371 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.qingjie.domain.User(true)
+2016-12-30 00:31:05.742  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.qingjie.domain.User(true)
+2016-12-30 00:31:05.742  INFO 3371 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<com.qingjie.domain.User>(true)
+2016-12-30 00:31:05.742  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<com.qingjie.domain.User>(true)
+2016-12-30 00:31:05.743  INFO 3371 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.qingjie.domain.User(true)
+2016-12-30 00:31:05.743  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.qingjie.domain.User(true)
+2016-12-30 00:31:05.744  INFO 3371 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /users.com.qingjie.web.UserController.getUserList.DefaultGenericTypeNamingStrategy
+2016-12-30 00:31:05.744  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /users.com.qingjie.web.UserController.getUserList.DefaultGenericTypeNamingStrategy
+2016-12-30 00:31:05.746  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getUserList was user-controller
+2016-12-30 00:31:05.747  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getUserList was user-controller
+2016-12-30 00:31:05.757  INFO 3371 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2016-12-30 00:31:05.758  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.String(true)
+2016-12-30 00:31:05.758  INFO 3371 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2016-12-30 00:31:05.758  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2016-12-30 00:31:05.759  INFO 3371 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.qingjie.domain.User(false)
+2016-12-30 00:31:05.759  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.qingjie.domain.User(false)
+2016-12-30 00:31:05.760  INFO 3371 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.qingjie.domain.User(false)
+2016-12-30 00:31:05.760  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.qingjie.domain.User(false)
+2016-12-30 00:31:05.765  INFO 3371 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.qingjie.domain.User(false)
+2016-12-30 00:31:05.767  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.qingjie.domain.User(false)
+2016-12-30 00:31:05.767  INFO 3371 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.qingjie.domain.User(false)
+2016-12-30 00:31:05.767  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.qingjie.domain.User(false)
+2016-12-30 00:31:05.768  INFO 3371 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /users.com.qingjie.web.UserController.postUser.DefaultGenericTypeNamingStrategy
+2016-12-30 00:31:05.768  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /users.com.qingjie.web.UserController.postUser.DefaultGenericTypeNamingStrategy
+2016-12-30 00:31:05.772  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method postUser was user-controller
+2016-12-30 00:31:05.774  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method postUser was user-controller
+2016-12-30 00:31:05.776  INFO 3371 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2016-12-30 00:31:05.776  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.String(true)
+2016-12-30 00:31:05.776  INFO 3371 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2016-12-30 00:31:05.777  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2016-12-30 00:31:05.777  INFO 3371 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.qingjie.domain.User(false)
+2016-12-30 00:31:05.777  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.qingjie.domain.User(false)
+2016-12-30 00:31:05.778  INFO 3371 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.qingjie.domain.User(false)
+2016-12-30 00:31:05.778  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.qingjie.domain.User(false)
+2016-12-30 00:31:05.779  INFO 3371 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /users/{id}.com.qingjie.web.UserController.putUser.DefaultGenericTypeNamingStrategy
+2016-12-30 00:31:05.779  INFO 3371 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /users/{id}.com.qingjie.web.UserController.putUser.DefaultGenericTypeNamingStrategy
+2016-12-30 00:31:05.792  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method putUser was user-controller
+2016-12-30 00:31:05.794  INFO 3371 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method putUser was user-controller
+2016-12-30 00:31:05.896  INFO 3371 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-12-30 00:31:05.905  INFO 3371 --- [main] com.qingjie.OrangeApplication            : Started OrangeApplication in 11.464 seconds (JVM running for 11.997)
+2016-12-30 00:31:06.628  INFO 3371 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-12-30 00:31:06.628  INFO 3371 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-12-30 00:31:06.657  INFO 3371 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
