@@ -3,7 +3,11 @@ package com.qingjie.domain;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-
+/**
+ * 
+ * @author orange
+ *
+ */
 public interface UserRepository extends JpaRepository<User, Integer> {
 	User findByName(String name);
 
