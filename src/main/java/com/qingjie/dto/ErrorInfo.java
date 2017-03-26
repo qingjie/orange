@@ -1,5 +1,10 @@
 package com.qingjie.dto;
-
+/**
+ * 
+ * @author orange
+ *
+ * @param <T>
+ */
 public class ErrorInfo<T> {
 	public static final Integer OK = 0;
 	public static final Integer ERROR = 100;
