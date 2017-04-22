@@ -64,6 +64,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 ).permitAll()
                 // allow access login API without require token
                 .antMatchers("/api/**").permitAll()
+                .antMatchers("/**").permitAll()
                 //.antMatchers(HttpMethod.POST, "/api/auth/**").permitAll()
                 // All other reruest must be specify token
                 .anyRequest().authenticated();
